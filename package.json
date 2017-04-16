@@ -1,0 +1,45 @@
+{
+    "name": "mavencode",
+    "displayName": "mavencode",
+    "description": "Maven utilities for Code",
+    "version": "0.0.1",
+    "publisher": "fxrialab",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:mavencode.init",
+        "onCommand:mavencode.addPkg"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+                "command": "mavencode.init",
+                "title": "Maven: Init"
+            },
+            {
+                "command": "mavencode.addPkg",
+                "title": "Maven: Add Package"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/mocha/bin/mocha ./test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.32",
+        "@types/node": "^6.0.40",
+        "eslint": "^3.6.0",
+        "mocha": "^2.3.3",
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0"
+    },
+    "dependencies": {
+        "xml": "^1.0.1",
+        "xml2js": "^0.4.17"
+    }
+}
